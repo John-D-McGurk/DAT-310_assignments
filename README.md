@@ -3,7 +3,7 @@
 
 ## Assignments
 
-**You need to be logged in to github, to access the assignment solutions.**
+**You need to be logged in to github, to access the assignments**
 
 | Assignment                         | Announced | Deadline      | Points | Solution |
 |------------------------------------|-----------|---------------|--------|----------|
