@@ -1,4 +1,4 @@
-# Assignment 3 - Booking prototype
+# Assignment 3 - Shopping prototype
 
 In this assignment you need to create a prototype for a (online shopping) site using HTML and CSS. The prototype consists of two HTML pages (front page `index.html`, and shopping cart/checkout `cart.html`) and a single stylesheet file (`style.css`).
 
