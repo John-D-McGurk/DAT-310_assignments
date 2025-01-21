@@ -9,6 +9,8 @@ Note that you *only create a mockup*. The content does not have to be dynamic. W
 Media and images which you use should be creative commons licensed. If you need to attribute the author put a comment in the html/css.
 [Openverse](https://wordpress.org/openverse/) is a good resource.
 
+[Images](#images)
+
 ### Fonts and colors
 
   * Use	sans-serif font family.
@@ -187,3 +189,20 @@ Merk at i du *bare lager en "mockup"*. Innholdet trenger ikke å være dynamisk.
   -	Eller se, for et eksempel: https://css-tricks.com/snippets/css/sticky-footer/
 
 Commit og push filene du laget (`index.html`, `cart.html`, `style.css`, plus valgfrie bilder) til GitHub.
+
+## Images
+
+#### Full index page
+![Full index page](samples/index-full.png)
+
+#### index page on wide screen
+![Index on large screen](samples/index.png)
+
+#### index page on small screen
+![Index on small screen](samples/index_small_screen.png)
+
+#### cart page on wide screen
+![Cart wide screen](samples/cart_wide_screen.png)
+
+#### cart page on small screen
+![Cart small screen](samples/cart_small_screen.png)
