@@ -1,6 +1,6 @@
 # Assignment 3 - Booking prototype
 
-In this assignment you need to create a prototype for a (online shopping) site using HTML and CSS. The prototype consists of three HTML pages (front page `index.html`, product page `product.html`, and shopping cart/checkout `cart.html`) and a single stylesheet file (`style.css`).
+In this assignment you need to create a prototype for a (online shopping) site using HTML and CSS. The prototype consists of two HTML pages (front page `index.html`, and shopping cart/checkout `cart.html`) and a single stylesheet file (`style.css`).
 
 Under the `samples/` folder you will find screenshots that serve as examples of what you need to create. You don't have to produce the exact same output that is shown on the samples, you can deviate from it in any way you want (especially in the content) as long as you follow the instructions given below.
 
@@ -28,7 +28,7 @@ Media and images which you use should be creative commons licensed. If you need 
     -	The main menu is part of the header and is horizontally aligned.
         -	It must be inside a `<nav>` element.
         -	It is right aligned and 5% from the right side of the page.
-        -	It contains 3 links, pointing to index.html, product.html and cart.html.
+        -	It contains 2, pointing to index.html and cart.html (Obs image has 3 links).
         - Every link is represented by an icon.
   *	**Main**
     -	There has to be 100px vertical space (margin or padding) on top of the main area.
@@ -60,24 +60,10 @@ Media and images which you use should be creative commons licensed. If you need 
       - Image is inside a framed box and resizes with the `<article>`.
       - Product name is an `<h3>`, with no margins.
       - Price is displayed together with the product name, but is right aligned.
-      - The product image `<img>` is a link to `product.html`.
     - Change the appearance of the product on mouseover, e.g. change background or borders)
     - Some of the products should contain a discount batch that is displayed on top of the image.
     - Discount batch should be located 30px from the top and right side of the frame around the image.
   *Hint: Images with the same dimension will make the design easier.*
-
-### Product page (`product.html`)
-
-  * Just like the front page, product page contains a summary of the shopping cart in an `<aside>` element
-  *	Show the image, name, and short description of the product at the top of the page in a framed box `.framed`.
-  * Show a form to select amount and size of the elements. (You can replace size with any other select that fits your store)
-  * The form contains a field that shows the price that does not allow input.
-  * Size should be a select containing at least 3 options.
-  * Form labels are right aligned, and all form elements have the same size.
-  * Display an "Add to Cart" button which is colored with a (background) color from your palette.
-  * Depending on the page width, the product information and form is displayed to the right or below the image (hint flexbox).
-  *	Display a "Details" header (h1).
-  *	Display a long description in a framed box `.framed`.
 
 
 ### Shopping cart page (`cart.html`)
@@ -99,7 +85,7 @@ Media and images which you use should be creative commons licensed. If you need 
   * Form elements are horizontally and vertically aligned.
   * Form fields have the same size and labels are right aligned. 
 
-Commit and push the files you created (`index.html`, `product.html`, `cart.html`, `style.css`, plus optional images) to GitHub.
+Commit and push the files you created (`index.html`, `cart.html`, `style.css`, plus optional images) to GitHub.
 
 **Optional1** Use a media query to display the `<aside>` element on top rather then next to the main content on small screens, as shown in [here](samples/optional_index_small.png). Hint: use a media query to change the flex-direction as in [this example](https://www.w3schools.com/csS/tryit.asp?filename=trycss3_flexbox_website2).
 
@@ -111,7 +97,7 @@ Commit and push the files you created (`index.html`, `product.html`, `cart.html`
 
 # Oppgave 3 - Webshop-prototype
 
-I denne innleveringen skal du lage en prototype for en (online shopping) nettside ved bruk av HTML og CSS. Prototypen skal bestå av tre HTML sider (hovedsiden `index.html`, produktsiden `product.html` og handlekurv/utskjekk-siden `cart.html`) og en enkel css-fil (`style.css`).
+I denne innleveringen skal du lage en prototype for en (online shopping) nettside ved bruk av HTML og CSS. Prototypen skal bestå av tre HTML sider (hovedsiden `index.html` og handlekurv/utskjekk-siden `cart.html`) og en enkel css-fil (`style.css`).
 
 Under `samples/` mappen finner du skjermbilder som skal fungere som eksempel av hva du skal lage. Du trenge ikke å lage en eksakt kopi av bildene, og så lenge du følger instruksjonene under kan du forandre på dem som du ønsker (spesielt i innhold).
 
@@ -136,7 +122,7 @@ Merk at i du *bare lager en "mockup"*. Innholdet trenger ikke å være dynamisk.
     -	Hovedmenyen er en del av headeren og ligger på rekke horisontalt.
         -	Det skal være en uordnet liste inni et `<nav>` element.
         -	Den er justert mot høyre og ligger 5% fra høyre side av dokumentet.
-        - Den inneholder 3 lenker, som peker til index.html, product.html og cart.html.
+        - Den inneholder 2 lenker, som peker til index.html og cart.html (obs bildet har 3 lenker).
         - Hver lenke er representert med et ikon.
     
   *	**Main**
@@ -170,23 +156,9 @@ Merk at i du *bare lager en "mockup"*. Innholdet trenger ikke å være dynamisk.
       - Bildet vises i en box med ramme (`.framed`) og forandrer størrelse sammen med `<article>`.
       - Produktnavnet er en `<h3>` uten marginer.
       - Pris vises sammen med produktnavnet, men justert til høyre.
-      - Produktbildet `<img>` er en lenke til `product.html`.
     - Endre utseendet til `<article>` elemented ved "mouseover", f.eks. endre bakgrunn eller border).
     - Noen av produktene skal inneholde en rabattmarker som vises opp på bildet.
     - Rabattmarkeren skal være plassert 30px fra oversiden og høyre siden rammen rundt bildet.
-
-### Produkt side (`product.html`)
-
-   * Lik hovedsiden inneholder produktsiden et sammendrag av handlekurven i et `<aside >` element.
-   * Vis bilde, navn og kort beskrivelse av et produkt øverst på siden i en innrammet boks `.framed`.
-   * Vis et skjema for å velge mengde og størrelse på elementene. (Du kan bytte ut størrelse med noe annet som passer for dine produkter.)
-   * Skjemaet også inneholder et felt som viser prisen som ikke tillater input.
-   * Størrelse skal være et select element som tilbyr minst 3 alternativer.
-   * Skjemaets labels er aligned mot høyre, og skjemaelementene har samme størrelse.
-   * Vis en "Legg i handlekurv" -knappen som er uthevet gjennom bakgrunnsfarge fra paletten.
-   * Avhengig av sidebredden, vises informasjonen og skjemaet til høyre eller under bildet (hint flexbox).
-   * Vis en "Details" overskrift (h1).
-   * Vis en lang beskrivelse i en innrammet boks `.framed`.
 
 ### Handlekurv side (`cart.html`)
 
@@ -214,4 +186,4 @@ Merk at i du *bare lager en "mockup"*. Innholdet trenger ikke å være dynamisk.
   - Deretter bruk absolutt posisjonering på footeren, eller bruk en flexbox.
   -	Eller se, for et eksempel: https://css-tricks.com/snippets/css/sticky-footer/
 
-Commit og push filene du laget (`index.html`, `product.html`, `cart.html`, `style.css`, plus valgfrie bilder) til GitHub.
+Commit og push filene du laget (`index.html`, `cart.html`, `style.css`, plus valgfrie bilder) til GitHub.
