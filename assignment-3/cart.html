@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-container" class="container">
+        <div id="header-logo">
+          <p>VegShop</p>
+          <p></p>
+        </div>
+
+        <nav>
+          <a href="index.html"
+            ><img src="static/house-svgrepo-com.svg" alt=""
+          /></a>
+          <a href="cart.html"
+            ><img src="static/bag-svgrepo-com.svg" alt=""
+          /></a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1>Cart</h1>
+      <div class="small-padding framed">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Banana</td>
+            <td>5</td>
+            <td>$1.50</td>
+            <td>-18%</td>
+            <td>$6.15</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td>Cucumber</td>
+            <td>2</td>
+            <td>$0.80</td>
+            <td>0%</td>
+            <td>$1.60</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td>Lemon</td>
+            <td>1</td>
+            <td>$2.40</td>
+            <td>0%</td>
+            <td>$2.40</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>$200</td>
+          </tr>
+        </table>
+      </div>
+      <h1>Checkout</h1>
+      <form action="" class="framed small-padding">
+        <fieldset>
+          <legend>Billing Details</legend>
+          <input name="first-name" type="text" placeholder="First Name" />
+          <input name="surname" type="text" placeholder="Surname" />
+          <input name="email" type="email" placeholder="Email" />
+        </fieldset>
+        <fieldset>
+          <legend>Delivery Adress</legend>
+          <input name="street" type="text" placeholder="Street" />
+          <input name="city" type="text" placeholder="City" />
+          <input name="post-code" type="text" placeholder="Post Code" />
+        </fieldset>
+        <fieldset>
+          <legend>Submit Order</legend>
+          <div>
+            <input type="checkbox" name="agree" id="tsagree" />
+            <label for="agree">I agree to the terms of service</label>
+          </div>
+          <input type="submit" value="Checkout" />
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <h2>Customer Service</h2>
+      <p>+47 123 45 67890 | contact@noreply.no</p>
+    </footer>
+  </body>
+</html>
