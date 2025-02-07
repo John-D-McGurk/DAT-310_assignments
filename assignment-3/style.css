@@ -243,8 +243,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--secondary);
-    position: absolute;
-  bottom: 0;
+
   width: 100%;
 }
 
