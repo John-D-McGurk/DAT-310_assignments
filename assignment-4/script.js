@@ -192,7 +192,6 @@ function search(searchTerm) {
 
     }
   }
-
 }
 
 function showModal(content) {
@@ -226,6 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.querySelector("#contact-form");
 
   contactForm.addEventListener("submit", (event) => {
+    console.log(event)
     event.preventDefault();
     addContact(contactForm);
   });
