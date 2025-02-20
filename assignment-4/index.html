@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAT310 Assignment 4</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
-    <form id="contact-form">
-        <input type="text" placeholder="Name" name="name" required>
-        <input type="email" placeholder="E-mail" name="email">
-        <input type="tel" placeholder="Phone number" name="phone">
-        <input type="text" placeholder="Name" name="name">
-        <input type="submit" value="Add to contacts">
-    </form>
+    <div id="modal">
+        <div id="modal-inner"></div>
+    </div>
+    <main class="container">
+        <h1>Address Book</h1>
+        <h2>Add a Contact</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="email" placeholder="E-mail" name="email">
+            <input type="tel" placeholder="Phone number" name="phone">
+            <input type="submit" value="Add to contacts">
+        </form>
+        <div>
+            <h2>Search</h2>
+            <input type="text" id="search" placeholder="Search">
+        </div>
+        <h2>Contacts List</h2>
+
+        <div class="table-container">
+        </div>
+    </main>
 </body>
+
 </html>
