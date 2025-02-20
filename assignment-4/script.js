@@ -1,7 +1,11 @@
 "use strict";
 
+class contact {
+    constructor()
+}
+
 function addContact(form) {
-    console.log(form.get('name'))
+    
 }
 
 document.addEventListener("DOMContentLoaded", () => {
