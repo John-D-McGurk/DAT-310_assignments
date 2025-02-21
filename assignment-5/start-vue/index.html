@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Import Vue -->
     <!-- development version, includes helpful console warnings -->
-<script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
 
-<script src="src/gamestat.js"></script>
-<script src="src/board.js"></script>
+    <script src="src/gamestat.js"></script>
+    <script src="src/board.js"></script>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Vue Memory</title>
 </head>
+
 <body>
     <div id="app">
-        <div id="startbutton">Start game</div>
-        <game-stat></game-stat>
-        <board></board>
+        <div @click="resetGame" id="startbutton">Reset game</div>
+        <game-stat :scores="playerScores" :flips="playerFlips" :turn="currentTurn"></game-stat>
+        <board @found-pair="foundPair" @turn-finished="changeTurn" @flip="countFlip" @all-cards-flipped="allCardsFlipped"
+            :reset-trigger="reset"></board>
         <div id="winner" class="winner">
-            The winner is <span id="winnerSpan"></span>!
+            The winner is <span id="winnerSpan">{{ winner }}</span>!
         </div>
     </div>
 
@@ -33,10 +36,69 @@
             // - how many pairs each player has found,
             // - who is the winner.
             // place this logic here, or in an external store.
+            data() {
+                return {
+                    reset: false,
+                    currentTurn: 1,
+                    playerScores: {
+                        1: 0,
+                        2: 0
+                    },
+                    playerFlips: {
+                        1: 0,
+                        2: 0
+                    },
+                    winner: 'no'
+                }
+            },
+            methods: {
+                changeTurn() {
+                    if (this.currentTurn === 1) {
+                        this.currentTurn = 2;
+                    } else {
+                        this.currentTurn = 1;
+                    }
+                },
+                countFlip() {
+                    if (this.currentTurn === 1) {
+                        this.playerFlips[1]++;
+                    } else {
+                        this.playerFlips[2]++;
+                    }
+                },
+                foundPair() {
+                    this.playerScores[this.currentTurn]++;
+                },
+                allCardsFlipped() {
+                    console.log('allcards')
+                    if (this.playerScores[1] === this.playerScores[2]) {
+                        this.winner = 'draw';
+                    } else if (this.playerScores[1] > this.playerScores[2]) {
+                        this.winner = 1;
+                    } else {
+                        this.winner = 2;
+                    }
+                    document.querySelector('#winner').style.display = 'block';
+                },
+                resetGame() {
+                    this.currentTurn = 1;
+                    this.playerScores = {
+                        1: 0,
+                        2: 0
+                    };
+                    this.playerFlips = {
+                        1: 0,
+                        2: 0
+                    };
+                    this.reset = !this.reset;
+                }
+            }
         });
         app.component('board', boardC);
-        app.component('game-stat',gameStatC);
+        app.component('game-stat', gameStatC);
         app.mount("#app");
+
     </script>
 </body>
+
 </html>

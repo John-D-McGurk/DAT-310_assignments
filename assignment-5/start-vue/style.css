@@ -7,6 +7,7 @@
     text-align: center;
     margin: auto;
     background-color: lightgoldenrodyellow;
+    display: none;
 }
 
 #startbutton {
@@ -46,17 +47,21 @@
     flex-shrink: 0;
     width: 100px;
     height: 150px;
+    transition: opacity 1s;
+    transform: scaleX(-1);
 }
 
-.card.back {
+.card.back {    
     z-index: 2;
     backface-visibility: hidden;
+    pointer-events: none;
 }
 
 .card.front {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .card img {
