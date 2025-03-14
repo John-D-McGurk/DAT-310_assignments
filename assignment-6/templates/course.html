@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ course.name }}</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student no</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students | sort(attribute='grade') %}
+                <tr>
+                    <td><a href="{{ url_for('student', student_no=student.student_no) }}">{{ student.student_no }}</a></td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.grade }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grade in grades %}
+                <tr>
+                    <td>{{ grade.grade }}</td>
+                    <td>{{ grade.count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('add_grade', course_id=course.course_id)}}">add grade</a>
+    </main>
+
+</body>
+</html>
